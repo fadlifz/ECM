@@ -26,9 +26,9 @@ public class FileScannerController {
     @Autowired
     private ExtractionService extractionService;
 
-    @PostMapping("/savePdfText")
+    @PostMapping("/saveToEcm")
     ResponseEntity<Map<String, Object>> scanFile(@RequestBody AllRequest allRequest)
-            throws Exception {
+            throws IOException {
         AllResponse text = extractionService.extract(allRequest);
         Map<String, Object> jsonMap = new HashMap<>();
         jsonMap.put("result", text);

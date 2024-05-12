@@ -7,5 +7,4 @@ import lombok.Builder;
 @Builder
 public class AllResponse {
     private String txtFile;
-    private String pdfFile;
 }
